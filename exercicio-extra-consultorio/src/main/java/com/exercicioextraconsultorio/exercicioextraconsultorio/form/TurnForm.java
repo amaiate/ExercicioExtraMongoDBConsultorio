@@ -1,5 +1,6 @@
 package com.exercicioextraconsultorio.exercicioextraconsultorio.form;
 
+import com.exercicioextraconsultorio.exercicioextraconsultorio.dto.TurnDTO;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.model.Turn;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.model.Doctor;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.model.Patient;
@@ -30,4 +31,6 @@ public class TurnForm {
                 turnForm.status
         );
     }
+
+
 }

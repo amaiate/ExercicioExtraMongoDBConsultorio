@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 @Service
 public class DoctorService {
@@ -19,5 +21,15 @@ public class DoctorService {
 
     public Doctor save(Doctor doctor){
         return doctorRepository.save(doctor);
+    }
+
+    public Doctor findByLastName(String lastName) {
+        Optional<Doctor> doctor = this.doctorRepository.findDoctorByLastName(lastName);
+
+        if(doctor.isPresent()) {
+            return doctor.get();
+        }
+
+        return null;
     }
 }

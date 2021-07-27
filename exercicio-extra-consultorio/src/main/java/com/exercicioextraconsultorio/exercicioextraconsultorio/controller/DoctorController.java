@@ -1,7 +1,9 @@
 package com.exercicioextraconsultorio.exercicioextraconsultorio.controller;
 
+import com.exercicioextraconsultorio.exercicioextraconsultorio.dto.TurnDTO;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.form.DoctorForm;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.model.Doctor;
+import com.exercicioextraconsultorio.exercicioextraconsultorio.model.Turn;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.service.DoctorService;
 import com.exercicioextraconsultorio.exercicioextraconsultorio.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +34,6 @@ public class DoctorController {
     public List<Doctor> get (){
         return doctorService.findAll();
     }
+
 
 }
